@@ -53,7 +53,24 @@ async function generateExcel() {
         { 1: "one", 2: "mobile", 3: "pieces" },
         { 1: "hello", 2: "world", 3: "test" },
     ]);
-    console.log(workbook);
+
+    const columns2 = worksheet2.columns = [
+        { header: "first", key: 1 },
+        { header: "second", key: 2 },
+    ];
+    const row = worksheet2.getRow(2);
+    // assign row values
+    row.values = {
+        1: "hello",
+        3: "third",
+        2: "world",
+    }
+
+    row.commit();
+    // get cells
+    worksheet.getCell('C1').note = "this is a new note";
+    const rows = worksheet.getRows(3, 2);
+    console.log(worksheet2);
 
     // convert to a downloadable file
     const buffer = await workbook.xlsx.writeBuffer();
@@ -61,7 +78,7 @@ async function generateExcel() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "report file.xlsx";
+    a.download = `report file ${date}.xlsx`;
     a.click();
 
     URL.revokeObjectURL(url);
