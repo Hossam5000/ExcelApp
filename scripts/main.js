@@ -27,7 +27,10 @@
 // URL.revokeObjectURL(url);
 // }
 
+// vars & cons
+const btnExport = document.getElementById("btn-export");
 
+// functions
 async function generateExcel() {
     // create the workbook and its worksheets
     const workbook = new ExcelJS.Workbook();
@@ -64,4 +67,5 @@ async function generateExcel() {
     URL.revokeObjectURL(url);
 };
 
-generateExcel();
+// events
+btnExport.addEventListener("click", generateExcel);

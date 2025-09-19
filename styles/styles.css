@@ -3,3 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    margin-top: 300px;
+    overflow: hidden;
+}
+
+#btn-export {
+    outline: none;
+    background: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#btn-export:hover {
+    background: #6bca0a;
+    color: #fff;
+}
