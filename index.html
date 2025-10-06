@@ -5,17 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExcelJS app</title>
+    <link rel="stylesheet" href="styles/components/modal.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
+    <!-- modal -->
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Enter Your Data</h3>
+            <input type="text" id="userInput" placeholder="Type something..." />
+            <button onclick="submitData()">Submit</button>
+        </div>
+    </div>
+
     <div class="container">
-        <h1 id="floorId">floor title</h1>
-        <ul class="divisions">
-            <li>division 01</li>
+        <h2>content: <span class="content-name"></span></h2>
+        <ul class="ingredients">
+            <!-- <li>Protein: <span class="protein"></span></li>
+            <li>Fiber: <span class="fiber"></span></li>
+            <li>carbohydrates: <span class="carbohydrates"></span></li>
+            <li>fats: <span class="fats"></span></li>
+            <li>sugars: <span class="sugars"></span></li> -->
         </ul>
     </div>
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>

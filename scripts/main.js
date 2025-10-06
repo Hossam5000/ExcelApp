@@ -1,34 +1,35 @@
-//test
-const floor01 = {
-    name: "orintal",
-    divisions: [
-        "konafa",
-        "basbosa",
-        "boxes",
-    ],
-    color: "#f0f",
-};
+// imports
+import cheese from "./libs/database/fundamentalNutritionIngridents.js";
+import modal from "./components/modal.js";
 
-const floor02 = {
-    name: "west",
-    divisions: [
-        "gatoh",
-        "torat",
-        "special",
-    ],
-    color: "#0f0",
-};
-
-// cons & vars
+// DOM references
 const container = document.querySelector(".container");
-const floorId = document.getElementById("floorId");
-const divisions = document.querySelector(".divisions");
+const ul = document.querySelector(".ingredients");
+// ingredients
+const protein = document.querySelector(".container .ingredients .protein");
+const fiber = document.querySelector(".container .ingredients .fiber");
+const carbohydrates = document.querySelector(".container .ingredients .carbohydrates");
+const fats = document.querySelector(".container .ingredients .fats");
+const sugars = document.querySelector(".container .ingredients .sugars");
 
+// protein.textContent = cheese.ingredients.protein;
+// fiber.textContent = cheese.ingredients.fiber;
+// carbohydrates.textContent = cheese.ingredients.carbohydrates;
+// fats.textContent = cheese.ingredients.fats;
+// sugars.textContent = cheese.ingredients.sugars;
 
-floorId.textContent = floor01.name;
-divisions.forEach((div, index) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = div[index];
-    floor01.append(listItem);
+cheese.ingredients.forEach(ingre => {
+    const li = document.createElement("li");
+
+    const span = document.createElement("span");
+    span.classList.add(`${ingre.name}:`);
+    span.textContent = `${ingre.value}`;
+
+    li.textContent = `${ingre.name}: `;
+
+    li.append(span);
+    ul.append(li);
+    console.log(li, span, span.innerHTML);
 });
-console.log(container, floorId, divisions);
+
+console.log(modal);
