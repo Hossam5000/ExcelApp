@@ -12,11 +12,6 @@ const carbohydrates = document.querySelector(".container .ingredients .carbohydr
 const fats = document.querySelector(".container .ingredients .fats");
 const sugars = document.querySelector(".container .ingredients .sugars");
 
-// protein.textContent = cheese.ingredients.protein;
-// fiber.textContent = cheese.ingredients.fiber;
-// carbohydrates.textContent = cheese.ingredients.carbohydrates;
-// fats.textContent = cheese.ingredients.fats;
-// sugars.textContent = cheese.ingredients.sugars;
 
 cheese.ingredients.forEach(ingre => {
     const li = document.createElement("li");
@@ -33,3 +28,18 @@ cheese.ingredients.forEach(ingre => {
 });
 
 console.log(modal);
+
+// modal function
+function openModal() {
+    document.getElementById("myModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+function submitData() {
+    const input = document.getElementById("userInput").value;
+    console.log("User input:", input);
+    closeModal();
+}
