@@ -1,6 +1,5 @@
 // imports
-import cheese from "./libs/database/fundamentalNutritionIngridents.js";
-import modal from "./components/modal.js";
+import cheese from "./database/fundamentalNutritionIngridents.js";
 
 // DOM references
 const container = document.querySelector(".container");
@@ -27,19 +26,8 @@ cheese.ingredients.forEach(ingre => {
     console.log(li, span, span.innerHTML);
 });
 
-console.log(modal);
+// modal
+const overlay = document.querySelector(".overlay")
+const closeBtn = document.querySelector(".close-bstn")
 
-// modal function
-function openModal() {
-    document.getElementById("myModal").style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-}
-
-function submitData() {
-    const input = document.getElementById("userInput").value;
-    console.log("User input:", input);
-    closeModal();
-}
+console.log(closeBtn)
