@@ -39,16 +39,20 @@ ul li {
 
 .modal {
     width: 400px;
-
+    display: block;
     padding: 20px;
 
     background-color: #fff;
     border-radius: 10px;
 }
 
-.modal-close {
+.modal-close-btn {
     width: 30px;
     height: 30px;
+
+    display: block;
+    border-radius: 3px;
+    margin-left: auto;
 
     text-align: center;
     line-height: 30px;
@@ -72,12 +76,11 @@ ul li {
 }
 
 .modal .recipe-filed {
+    display: flex;
+    justify-content: space-between;
     margin: 10px 0;
 }
 
-.modal .recipe-filed input {
-    width: 100%;
-}
 
 .modal button {
     width: 100%;
@@ -98,7 +101,7 @@ ul li {
     cursor: pointer;
 }
 
-input[type="text"] {
+input {
     width: 90%;
     padding: 8px;
     margin: 10px 0;
