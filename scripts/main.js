@@ -38,7 +38,7 @@ ModalCloseBtn.addEventListener("click", () => {
     overlay.style.display = "none";
 });
 
-console.log("test");
+// console.log("test");
 
 // codewars - challenge
 function generatePrimeNumbers(nums) {
@@ -46,9 +46,17 @@ function generatePrimeNumbers(nums) {
         const factors = [];
         for (let index = 0; index < num; index++) {
             num[index];
-            console.log(num);
+            // console.log(num);
         }
     });
 };
 
 generatePrimeNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function divideNumber(num) {
+    for (let i = 0; i < num; i++) {
+        console.log(num);
+    }
+}
+
+divideNumber(2);
