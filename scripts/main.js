@@ -38,17 +38,44 @@ ModalCloseBtn.addEventListener("click", () => {
     overlay.style.display = "none";
 });
 
-console.log("test");
+// console.log("test");
+
+
+
+
+
+
+
+
+
+
 
 // codewars - challenge
 function generatePrimeNumbers(nums) {
+    let primeNums = [];
     nums.forEach(num => {
-        const factors = [];
-        for (let index = 0; index < num; index++) {
-            num[index];
-            console.log(num);
+        if (getPrimeNumFactors(num)) {
+            primeNums.push(num);
         }
     });
+    console.log(primeNums.join(""));
 };
 
 generatePrimeNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function getPrimeNumFactors(num) {
+    const store = [];
+    for (let i = 1; i <= num; i++) {
+        let newNum = num / i;
+        // console.log(newNum);
+        if (Number.isInteger(newNum)) {
+            store.push(newNum);
+        }
+    }
+    if (store.length === 2) {
+        return true;
+    }
+    // console.log(store);
+}
+
+// console.log(getPrimeNumFactors(3));
