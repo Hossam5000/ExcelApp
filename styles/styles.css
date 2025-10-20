@@ -82,6 +82,13 @@ ul li {
 }
 
 
+.modal .recipe-field .top,
+.modal .recipe-field .content {
+    display: flex;
+    justify-content: space-around;
+}
+
+
 .modal button {
     width: 100%;
     font-size: 25px;
